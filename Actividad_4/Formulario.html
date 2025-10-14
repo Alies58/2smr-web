@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formularios :D</title>
+        <title>Formulario de prueba de HTML5</title>
     </head>
     <body>
         <h1>Controles de formulario</h1>
-        <form>
+        <form method="get" action="">
             <fieldset>
                 <legend>Datos personales</legend>
                 <label for="nombre">Nombre:</label>
@@ -19,9 +19,68 @@
                 <label for="url">URL:</label>
                 <input type="url" id="url" name="url" placeholder="Escribe la URL de tu página web personal">
                 <br><br>
-                <label for="ciudad"></label>
-
+                <label for="ciudad">Ciudad:</label>
+                <select name="ciudad" id="ciudades">
+                    <option value="almeria">Almería</option>
+                    <option value="cadiz">Cádiz</option>
+                    <option value="cordoba">Córdoba</option>
+                    <option value="granada">Granada</option>
+                    <option value="huelva">Huelva</option>
+                    <option value="jaen">Jaén</option>
+                    <option value="malaga">Málaga</option>
+                    <option value="sevilla" selected>Sevilla</option>
+                </select>                
             </fieldset>
+
+            <fieldset>
+                <legend>Otros datos</legend>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+                <br><br>
+                <label for="tiempo">Tiempo:</label>
+                <input type="time" id="tiempo" name="tiempo">
+                <br><br>
+                <label for="fechayhora">Fecha y hora:</label>
+                <input type="datetime-local" id="fechayhora" name="fechayhora">
+                <br><br>
+                <label for="mes">Mes:</label>
+                <input type="month" id="mes" name="mes">
+                <br><br>
+                <label for="semana">Semana:</label>
+                <input type="week" id="semana" name="semana">
+                <br><br>
+                <label for="numero">Número (min -10, max 10):</label>
+                <input type="number" id="numero" name="numero" min="-10" max="10">
+                <br><br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name=telefono pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="123-456-789">
+                <br><br>
+                <label for="busqueda">Término de busqueda:</label>
+                <input type="search" id="busqueda" name="busqueda">
+                <br><br>
+                <label for="color">Color favorito:</label>
+                <input type="color" id="color" name="color">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros controles</legend>
+                <label for="aficiones">Aficiones</label>
+                <input type="checkbox" id="cine" name="aficiones" value="cine">
+                <label for="cine">Cine</label>
+                <input type="checkbox" id="deporte" name="aficiones" value="deporte">
+                <label for="deporte">Deporte</label>
+                <br><br>
+                <label for="pago">Forma de pago</label>
+                <input type="radio" id="visa" name="pago" value="V">
+                <label for="visa">Visa</label>
+                <input type="radio" id="american" name="pago" value="A">
+                <label for="american">American Express</label>
+                <input type="radio" id="mastercard" name="pago" value="M">
+                <label for="mastercard">MasterCard</label>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
         </form>
     </body>
 </html>
